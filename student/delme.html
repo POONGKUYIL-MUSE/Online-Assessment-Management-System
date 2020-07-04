@@ -1,0 +1,59 @@
+
+//Right Click Disabler
+document.addEventListener("contextmenu", event=>event.preventDefault());
+
+//New Tab or New Window or inactive state - Logout Generator
+window.addEventListener('blur', logout);
+var alertcount = 0;
+var correctCount = 0;
+function logout(){
+	if(alertcount < 3){
+		alert("Quiz will be terminated automatically once when you get 3 alert messages");
+		//window.location.assign("logout.php");
+		alertcount++;
+	}
+	else {
+		window.location.assign("scoreboard.php?autolog=yes&cc="+correctCount);
+	}
+}
+
+//Keyboard Right-Click disabler
+/*
+KEYCODES
+67 - C
+85 - U
+86 - V
+117 - u
+83 - S
+80 - P
+73 - I
+105 - i
+*/
+
+document.onkeydown = function(e) {
+  if((e.ctrlKey) && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117 || e.keyCode === 83 || e.keyCode === 80)) {
+    alert("Not Allowed");
+  return false;
+  }
+  else if((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 105 ))){
+    alert("Not Allowed");
+    return false;
+  }
+  else {
+    return true;
+  }
+};
+
+//FULL SCREEN F11 OPTIONALITY
+var elem = document.documentElement;
+function openFullScreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}

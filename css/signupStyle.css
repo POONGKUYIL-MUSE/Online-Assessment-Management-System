@@ -1,0 +1,16 @@
+* {box-sizing: border-box;}
+.header-right{
+	margin-left:900px; padding-right:100px;
+	float: right;
+	padding-right: 100px;
+}
+@media screen and (max-width: 600px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+  	float: none;
+  }
+}

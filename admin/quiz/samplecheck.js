@@ -1,0 +1,1 @@
+var myJson = [{"qno":"1","qn":"My Question","option1":"Opt1","option2":"Opt2","option3":"Opt3","option4":"Opt4","answer":"c"}]

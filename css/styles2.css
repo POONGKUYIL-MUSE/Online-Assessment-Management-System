@@ -1,0 +1,111 @@
+.qpanel{
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.qhead{
+  margin:10px;
+  padding: 10px;
+  font-size: 25px;
+}
+.qbody{
+  margin: 10px;
+  padding: 10px 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+input[type=radio]{
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+}
+.nextbtn {
+  margin-left: 40px;
+}
+.changestyle{
+  display: inline;
+  position: relative;
+  font:100px Helvetica, Sans-Serif;
+  letter-spacing: -5px;
+  color: rgba(0,0,255,0.5);
+}
+.changestyle:after {
+  content:"Your score : 2";
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: rgba(255,0,0,0.5);
+}
+
+.success{
+    padding:20px;
+    background-color:#4CAF50;
+    color:white;
+    font-size: 20px;
+  }
+.sidebar {
+  margin: 0;
+  padding-top: 80px;
+  width: 200px;
+  background-color: #111;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  font-size: 25px;
+  display: block;
+  color: #818181;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color:#f1f1f1;
+}
+ 
+div.content {
+  margin-left: 200px;
+  padding: 100px 16px;
+  height: 1000px;
+}
+
+.out{
+  margin-left: 1200px;
+  margin-right: 100px;
+}
+
+tr{
+  border:1px solid #ddd;
+}
+
+
+@media screen and (max-width: 900px){
+  .out .nav-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .out .nav-link {
+    display: none;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left; font-size: 15px;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .out .nav-link {
+    display: none;
+  }
+}
